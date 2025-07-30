@@ -27,7 +27,7 @@ Ce projet a été réalisé dans le cadre d'un stage. Il inclut :
 
 ## Auteur
 
-Havana Al Ali
+Havana Al Ali, 
 Bismillah Hashimi
 
 
