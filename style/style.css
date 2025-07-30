@@ -1,9 +1,26 @@
+body{
+  margin: 0;
+  padding: 0;
+}
 ul {
   list-style-type: none;
   padding: 0;
    margin: auto;
   display: flex;
   justify-content: center;
+  font-weight: bold;
+  margin-top: 1%;
+  background-color: #4c5166;
+  padding: 30px;
+  margin-top: 0;
+  
+}
+.grilog{
+  padding: 0;
+  margin: 0;
+  float: left;
+    background-color: #4c5166;
+
 }
 
 li {
@@ -13,7 +30,7 @@ li {
 }
 
 li a {
-  color: black;
+  color: #fff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -32,7 +49,34 @@ li a:hover {
     text-align: center;
     margin-right: 5%;
 }
+.btns{
+  text-align: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+}
 
+.offres{
+  background-color: #00DDEB;
+  padding: 15px;
+  border-radius: 50px;
+  width: 150px;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  
+}
+.inscrire{
+    background-color: #00DDEB;
+  padding: 15px;
+  border-radius: 50px;
+  width: 150px;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+}
 .titre-2{
   
     font-style: normal;
@@ -46,7 +90,7 @@ li a:hover {
     font-size: 20px;
     margin: auto;
     text-align: justify;
-    font-family: sans-serif;
+    
   }
 
 
@@ -55,6 +99,13 @@ li a:hover {
     margin: auto;
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.grafe-3{
+  margin-top: 43px;
+}
+.img-3{
+  margin-top: 20px;
 }
 
 .container-footer {
@@ -109,16 +160,25 @@ text-align: left;
     justify-content: space-between;
   }
   .colonne {
+    margin-top: 5%;
     width: 30%;
     padding: 10px;
-  background-color: #dbdde7;
+  
   }
-
+p{
+  font-size: 20px;
+}
   .grafe-1{
     font-size: larger;
     text-align: justify;
   }
-
+  .img-1{
+    margin-top: 40px;
+  }
+.grafe-2{
+    font-size: larger;
+    text-align: justify;
+}
 
 .button-64 {
   margin: auto;

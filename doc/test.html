@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GRIStage - Accueil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@700&display=swap" rel="stylesheet" />
+  <style>
+  
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #2E2E2E;
+      background-color: #FFFFFF;
+      line-height: 1.6;
+    }
+    a {
+      color: #00CFFF;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+  
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      border-bottom: 1px solid #ddd;
+      font-family: 'Poppins', sans-serif;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 24px;
+      color: #00B5D4;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+    nav ul li {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    
+    .banner {
+      background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+      text-align: center;
+      padding: 0 20px;
+    }
+    .banner h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .btn {
+      background-color: #00B5D4;
+      color: white;
+      padding: 12px 25px;
+      font-weight: 700;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+    }
+    .btn:hover {
+      background-color: #009bb2;
+    }
+
+    /* Section about */
+    .about {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+    }
+    .about-text {
+      flex: 1 1 400px;
+    }
+    .about-text h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    .about-text p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+    .about-image {
+      flex: 1 1 400px;
+    }
+    .about-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Quick access */
+    .quick-access {
+      max-width: 900px;
+      margin: 40px auto 60px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
+    .quick-card {
+      background-color: #00B5D4;
+      color: white;
+      padding: 25px 35px;
+      border-radius: 8px;
+      flex: 1 1 250px;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    .quick-card:hover {
+      background-color: #009bb2;
+    }
+
+    
+    footer {
+      background-color: #3C405B;
+      color: #ddd;
+      padding: 25px 30px;
+      font-size: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Open Sans', sans-serif;
+    }
+    footer .contact-info {
+      max-width: 60%;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about {
+        flex-direction: column;
+      }
+      .quick-access {
+        flex-direction: column;
+        gap: 20px;
+      }
+      nav ul {
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">GRIStage</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Informations</a></li>
+        <li><a href="#">Inscription</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1>Bienvenue sur GRIStage, votre plateforme de stage IT !</h1>
+    <div class="btn-group">
+      <a href="#" class="btn">Voir les offres</a>
+      <a href="#" class="btn">S’inscrire</a>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about-text">
+      <h2>À propos de GRIStage</h2>
+      <p>
+        GRIStage est une plateforme centralisée dédiée aux étudiants en recherche de stage IT, aux recruteurs partenaires, et aux administrateurs du Groupement romand de l’informatique (GRI). Notre objectif est d’améliorer l’expérience utilisateur grâce à une interface claire et responsive, en offrant une navigation fluide et cohérente avec la charte graphique de gri.ch.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1519452575410-c08ff8ca8f44?auto=format&fit=crop&w=600&q=80" alt="Image IT et stages" />
+    </div>
+  </section>
+
+  <section class="quick-access">
+    <div class="quick-card">Voir les offres</div>
+    <div class="quick-card">S’inscrire</div>
+    <div class="quick-card">Témoignages</div>
+  </section>
+
+  <footer>
+    <div class="contact-info">
+      <p>Adresse : Rue de la Paix 10, 1000 Lausanne</p>
+      <p>Téléphone : +41 21 123 45 67</p>
+      <p>Email : contact@gri.ch</p>
+    </div>
+    <div class="copyright">
+      <p>© Copyright 2019 – 2025 | GRI</p>
+    </div>
+  </footer>
+
+</body>
+</html>

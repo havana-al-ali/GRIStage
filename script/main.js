@@ -1,0 +1,4 @@
+function myFunction() {
+    console.log("tesdt")
+    document.getElementById("demo").innerHTML = "La recherche personnalisée de stages repose sur une méthodologie précise, combinant des conseils experts, des plateformes spécialisées et des outils d'orientation intelligents. En définissant clairement ton profil et tes objectifs, tu bénéficies d'un filtrage ciblé des offres disponibles et d'un accès privilégié à des réseaux professionnels. Les séances d'accompagnement te permettent également de renforcer tes candidatures avec des CV adaptés, des lettres de motivation percutantes, et une préparation aux entretiens sur mesure. L'objectif ? Te mettre dans les meilleures conditions pour décrocher un stage à forte valeur ajoutée, en phase avec ton projet professionnel et ton développement personnel.";
+}
