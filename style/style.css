@@ -85,6 +85,10 @@ li a:hover {
   border-radius: 5px;
 }
 
+.glow-on-hover:hover {
+  background: #25afb4;
+
+}
 
 .glow-on-hover-2 {
   width: 150px;
@@ -99,6 +103,10 @@ li a:hover {
   position: relative;
   z-index: 0;
   border-radius: 5px;
+}
+
+.glow-on-hover-2:hover {
+  background: #25afb4;
 }
 
 .glow-on-hover-3 {
@@ -116,6 +124,10 @@ li a:hover {
   z-index: 0;
   border-radius: 5px;
 
+}
+
+.glow-on-hover-3:hover {
+  background: #25afb4;
 }
 
 .banner {
@@ -295,7 +307,7 @@ footer {
 }
 
 .button-64:hover {
-  background: rgb(83, 196, 216);
+  background: #25afb4;
   outline: 0;
 
 }
