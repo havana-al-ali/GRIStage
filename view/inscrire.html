@@ -1,43 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css ">
-    <title>Gri stages</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <title>GRIStage - Inscription</title>
 </head>
 <body>
- 
   <nav>
-    <img src="../img/Logo-GRI-300-fond-transparent.png" alt="gri-logo" width="140" height="79">
+    <img src="../img/Logo-GRI-300-fond-transparent.png" alt="gri-logo" width="140" height="79" />
     <ul>
-      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="servises.html">Services</a></li>
       <li><a href="information.html">Informations</a></li>
-      <li><a href="inscrire.html">Inscription</a></li>
+      <li><a class="active" href="inscrire.html">Inscription</a></li>
     </ul>
   </nav>
-<footer>
-   <div class="container-footer">
-    <div class="col autures">
-      <p>Havana Al-Ali</p>
-      <p>Bismellah HASHIMI</p>
-      <p>Version: 1.0</p>
-    </div>
 
-    <div class="col copie">
-      <p>© Copyright 2019 - 2025</p>
-      <p>Groupement romand de l'informatique</p>
-      <p>ALL RIGHTS RESERVED</p>
-    </div>
+  <main>
+    <h1>Inscription à GRIStage</h1>
+    <form method="POST" action="../script/inscription.php" enctype="multipart/form-data">
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required />
 
-    <div class="col-gri">
-      <p class="par-phon">Tél: ++41 21 652 30 70</p>
-      <a href="mailto:gri@gri.ch" class="mail">Email: gri@gri.ch</a>
-      <p class="addresse">Adresse: En Chamard 41A 1442 Montagny</p>
-    </div>
+      <label for="prenom">Prénom :</label>
+      <input type="text" id="prenom" name="prenom" required />
 
-  </div>
-</footer>
+      <label for="email">Adresse e-mail :</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mot_de_passe">Mot de passe :</label>
+      <input type="password" id="mot_de_passe" name="mot_de_passe" required />
+
+      <label for="mot_de_passe_conf">Confirmer mot de passe :</label>
+      <input type="password" id="mot_de_passe_conf" name="mot_de_passe_conf" required />
+
+      <label for="cv">CV (PDF, DOC, DOCX) :</label>
+      <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required />
+
+      <label for="lettre_motivation">Lettre de motivation :</label>
+      <textarea id="lettre_motivation" name="lettre_motivation" rows="5"></textarea>
+
+      <label>
+        <input type="checkbox" name="accept_conditions" required />
+        J’accepte les conditions d’utilisation
+      </label>
+
+      <button type="submit">S'inscrire</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="container-footer">
+      <div class="col autures">
+        <p>Havana Al-Ali</p>
+        <p>Bismellah HASHIMI</p>
+        <p>Version: 1.0</p>
+      </div>
+
+      <div class="col copie">
+        <p>© Copyright 2019 - 2025</p>
+        <p>Groupement romand de l'informatique</p>
+        <p>ALL RIGHTS RESERVED</p>
+      </div>
+
+      <div class="col-gri">
+        <p class="par-phon">Tél: ++41 21 652 30 70</p>
+        <a href="mailto:gri@gri.ch" class="mail">Email: gri@gri.ch</a>
+        <p class="addresse">Adresse: En Chamard 41A 1442 Montagny</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
