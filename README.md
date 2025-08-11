@@ -12,11 +12,14 @@ Ce projet a été réalisé dans le cadre d'un stage. Il inclut :
 
 ## Structure du projet
 
-- `Base_de_données/` : scripts et fichiers relatifs à la base de données
+- `BD/` : fichiers relatifs à la base de données
 - `doc/` : documentation du projet
 - `img/` : images utilisées dans le projet
+- `php/` : fichiers back-end (php)
+- `script/` : fichiers dynamiques (JavaScript)
 - `style/` : fichiers CSS pour le style
 - `view/` : fichiers front-end (HTML)
+
 
 ## Installation
 

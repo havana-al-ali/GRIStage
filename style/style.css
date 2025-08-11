@@ -133,7 +133,7 @@ li a:hover {
 
 .banner {
   background-image: url(../img/Blue\ Illustration\ Technology\ LinkedIn\ Banner\ \(1\).png);
-  width: 1920px;
+  width: 1905px;
   height: 335px;
 }
 
@@ -174,14 +174,18 @@ h4{
   margin-left: 0px;
   margin-top: 40px;
   }
-  
+.cologne-droite{
+  margin-top: 50px;
+  float: right;
+  font-size: 20px;
+  padding-right: 80px;
+}
 .temoignage{
   border: 2px solid #aeb4c9;
   border-radius: 5px;
   background-color: #faf7f7;
   padding: 20px;
   margin: 20px;
-  
 }
 
  .bienvenue{
@@ -348,3 +352,85 @@ footer {
     min-width: 20px;
   }
 }
+
+    main {
+      background: white;
+      padding: 30px 40px;
+      margin: 40px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 15px;
+      font-weight: 600;
+      color: #34495e;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="file"],
+    textarea {
+      margin-top: 5px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    label[for="accept_conditions"] {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px;
+      background-color: #2980b9;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1f6391;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 20px;
+      }
+
+      button {
+        font-size: 15px;
+      }
+    }
