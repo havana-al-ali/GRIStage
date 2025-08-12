@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/style.css">
+  <title>Services</title>
+</head>
+
+<body>
+  <nav>
+    <img src="../img/Logo-GRI-300-fond-transparent.png" alt="gri-logo" width="140" height="79">
+    <ul>
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="offres.html">Offres</a></li>
+      <li><a href="information.html">Informations</a></li>
+      <li><a href="inscrire.html">Inscription</a></li>
+    </ul>
+  </nav>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background: #f9f9f9; color: #2E2E2E; }
+    h2 { color: #007acc; }
+    .services-container { display: flex; gap: 20px; justify-content: space-between; flex-wrap: wrap; }
+    .service-card {
+      background: white; 
+      border-radius: 8px; 
+      box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+      padding: 20px;
+      width: 30%;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .service-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+    .btn {
+      background-color: #00B5D4;
+      border: none;
+      padding: 10px 15px;
+      color: white;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: background-color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      user-select: none;
+    }
+    .btn:hover {
+      background-color: #0098bb;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 10px; right: 15px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Services</h1>
+  <div class="services-container">
+    <div class="service-card" data-service="1">
+      <h2>Recherche de stages personnalisée</h2>
+      <p><strong>Trouve facilement un stage adapté à ton niveau, tes compétences et tes objectifs.</strong></p>
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Recherche stages" />
+      <button class="btn btn-info">En savoir plus →</button>
+    </div>
+
+    <div class="service-card" data-service="2">
+      <h2>Tests de compétences</h2>
+      <p><strong>Valide tes connaissances en développement web, programmation, cybersécurité, etc.</strong></p>
+      <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=400&q=80" alt="Tests compétences" />
+      <button class="btn btn-info">En savoir plus →</button>
+    </div>
+
+    <div class="service-card" data-service="3">
+      <h2>Assistance et support technique</h2>
+      <p><strong>Une équipe dédiée pour t’aider à chaque étape de ta recherche ou candidature.</strong></p>
+      <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=400&q=80" alt="Support technique" />
+      <button class="btn btn-info">En savoir plus →</button>
+    </div>
+  </div>
+
+  <button id="btn-to-offres" class="btn" style="margin-top:30px;">Voir les offres de stage</button>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalText = document.getElementById('modal-text');
+    const modalClose = document.getElementById('modal-close');
+
+    const servicesDetails = {
+      1: `Trouver un stage en adéquation avec ses ambitions professionnelles peut s’avérer complexe. Chaque étudiant ou jeune diplômé possède un parcours, des compétences et des attentes qui lui sont propres. Adopter une approche personnalisée permet de repérer des opportunités qui correspondent réellement aux compétences acquises, au secteur d’activité visé, et aux objectifs à long terme.`,
+      2: `Les tests de compétences représentent un excellent outil pour mesurer ses connaissances et son niveau d’expertise dans des domaines clés comme le développement web, la programmation ou la cybersécurité. Grâce à des mises en situation réalistes et des exercices pratiques, ces tests permettent de se confronter aux standards actuels du secteur numérique.`,
+      3: `Une équipe de spécialistes est disponible pour t’accompagner tout au long de ta recherche d’emploi ou dans le cadre d’une candidature. Grâce à l’expertise de cette équipe dédiée, tu avances avec confiance dans ton parcours professionnel. Cet accompagnement te permet de rester concentré sur l’essentiel, tout en maximisant tes chances de réussite.`
+    };
+
+    document.querySelectorAll('.btn-info').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const serviceId = e.target.closest('.service-card').dataset.service;
+        modalTitle.textContent = document.querySelector(`.service-card[data-service="${serviceId}"] h2`).textContent;
+        modalText.textContent = servicesDetails[serviceId];
+        modal.style.display = 'flex';
+      });
+    });
+
+    modalClose.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if(e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+
+    // Redirection vers page Offres
+    document.getElementById('btn-to-offres').addEventListener('click', () => {
+      window.location.href = 'offres.html';
+    });
+  </script>
+    <footer>
+      <div class="container-footer">
+        <div class="col autures">
+          <p>Havana Al-Ali</p>
+          <p>Bismellah HASHIMI</p>
+          <p>Version: 1.0</p>
+        </div>
+  
+        <div class="col copie">
+          <p>© Copyright 2019 - 2025</p>
+          <p>Groupement romand de l'informatique</p>
+          <p>ALL RIGHTS RESERVED</p>
+        </div>
+  
+        <div class="col-gri">
+          <p class="par-phon">Tél: ++41 21 652 30 70</p>
+          <a href="mailto:gri@gri.ch" class="mail">Email: gri@gri.ch</a>
+          <p class="addresse">Adresse: En Chamard 41A 1442 Montagny</p>
+        </div>
+  
+      </div>
+    </footer>
+</body>
+</html>

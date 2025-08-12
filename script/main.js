@@ -53,5 +53,5 @@ searchBar.addEventListener('input', e => {
 
 // Gestion bouton retour
 btnBack.addEventListener('click', () => {
-  window.location.href = '../services.html';
+  window.location.href = 'services.html';
 });
