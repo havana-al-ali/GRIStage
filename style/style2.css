@@ -1,0 +1,67 @@
+/* style/style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background: #f9f9f9;
+    color: #2E2E2E;
+  }
+  
+  h1 {
+    color: #007acc;
+    margin-bottom: 10px;
+  }
+  
+  #search-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .offre {
+    background: white;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgb(0 0 0 / 0.1);
+  }
+  
+  .offre h3 {
+    margin: 0 0 8px;
+  }
+  
+  .offre p {
+    margin: 4px 0;
+  }
+  
+  .offre .lieu {
+    font-style: italic;
+    color: #555;
+  }
+  
+  .btn-back {
+    background-color: #00B5D4;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-back:hover {
+    background-color: #0098bb;
+  }
+  
+  #no-results {
+    font-style: italic;
+    color: #777;
+    margin-top: 10px;
+  }
+  

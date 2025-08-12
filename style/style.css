@@ -361,6 +361,7 @@ footer {
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       width: 100%;
       max-width: 500px;
+      margin-bottom: 100px;
     }
 
     h1 {
