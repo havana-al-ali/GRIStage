@@ -329,7 +329,7 @@ footer {
   width: 170px;
   justify-content: center;
   align-items: center;
-  background-color: #4c5166;
+  background-color: #3b97ede5;
   color: #FFFFFF;
   border-radius: 5px;
   display: flex;
@@ -554,4 +554,12 @@ footer {
 .but-3{
   text-align: center;
   margin-bottom: 120px;
+}
+
+.btn-inscire{
+  background-color: #3b97ede5;
+}
+
+.btn-inscire :hover{
+  background-color: #25afb4;
 }
