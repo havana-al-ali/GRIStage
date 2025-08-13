@@ -1,15 +1,15 @@
 // Liste des offres 
 const offres = [
-  { titre: "Développeur Web Junior", description: "Stage en développement front-end et back-end, utilisation de React et Node.js.", lieu: "Lausanne" },
-  { titre: "Assistant Cybersécurité", description: "Stage en analyse de vulnérabilités et gestion des incidents de sécurité.", lieu: "Genève" },
-  { titre: "Data Analyst", description: "Stage en analyse de données, visualisation et reporting avec Python et Tableau.", lieu: "Yverdon" },
-  { titre: "Support Technique", description: "Stage en assistance aux utilisateurs, diagnostic matériel et logiciel.", lieu: "Yverdon" },
-  { titre: "Développeur Mobile", description: "Stage en développement d'applications iOS et Android.", lieu: "Lausanne" },
-  { titre: "Administrateur Réseau", description: "Stage en gestion d'infrastructures réseaux et maintenance.", lieu: "Lausanne" },
-  { titre: "Développeur Backend", description: "Stage en développement d'API REST et bases de données.", lieu: "Genève" },
-  { titre: "Testeur QA", description: "Stage en tests fonctionnels et automatisés.", lieu: "Lausanne" },
-  { titre: "Community Manager", description: "Stage en gestion des réseaux sociaux et communication digitale.", lieu: "Lausanne" },
-  { titre: "UX/UI Designer", description: "Stage en design d’interfaces utilisateur et expérience utilisateur.", lieu: "Yverdon" }
+  { titre: "Développeur Web Junior", description: "Stage en développement front-end et back-end, utilisation de React et Node.js.", lieu: "Lausanne", durée: "3 mois"},
+  { titre: "Assistant Cybersécurité", description: "Stage en analyse de vulnérabilités et gestion des incidents de sécurité.", lieu: "Genève", durée: "6 mois"},
+  { titre: "Data Analyst", description: "Stage en analyse de données, visualisation et reporting avec Python et Tableau.", lieu: "Yverdon", durée: "2 mois" },
+  { titre: "Support Technique", description: "Stage en assistance aux utilisateurs, diagnostic matériel et logiciel.", lieu: "Yverdon", durée: "4 mois" },
+  { titre: "Développeur Mobile", description: "Stage en développement d'applications iOS et Android.", lieu: "Lausanne", durée: "6 mois" },
+  { titre: "Administrateur Réseau", description: "Stage en gestion d'infrastructures réseaux et maintenance.", lieu: "Lausanne", durée: "5 mois" },
+  { titre: "Développeur Backend", description: "Stage en développement d'API REST et bases de données.", lieu: "Genève", durée: "6 mois" },
+  { titre: "Testeur QA", description: "Stage en tests fonctionnels et automatisés.", lieu: "Lausanne", durée: "2 mois" },
+  { titre: "Community Manager", description: "Stage en gestion des réseaux sociaux et communication digitale.", lieu: "Lausanne", durée: "4 mois" },
+  { titre: "UX/UI Designer", description: "Stage en design d’interfaces utilisateur et expérience utilisateur.", lieu: "Yverdon", durée: "3 mois" }
 ];
 
 const container = document.getElementById('offres-container');
@@ -32,6 +32,7 @@ function afficherOffres(listOffres) {
       <h3>${offre.titre}</h3>
       <p>${offre.description}</p>
       <p class="lieu">Lieu : ${offre.lieu}</p>
+      <p class="durée">Durée : ${offre.durée}</p>
     `;
     container.appendChild(div);
   });
@@ -46,7 +47,8 @@ searchBar.addEventListener('input', e => {
   const filtered = offres.filter(o =>
     o.titre.toLowerCase().includes(query) ||
     o.description.toLowerCase().includes(query) ||
-    o.lieu.toLowerCase().includes(query)
+    o.lieu.toLowerCase().includes(query) ||
+    o.durée.toLowerCase().includes(query)
   );
   afficherOffres(filtered);
 });
