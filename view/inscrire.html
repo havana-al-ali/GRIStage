@@ -22,8 +22,6 @@
   <h1>Inscription à GRIStage</h1>
   <form method="POST" action="../php/inscription.php" enctype="multipart/form-data">
 
-
-    
     <label for="nom">Nom :</label>
     <input type="text" id="nom" name="nom" required />
 
@@ -44,6 +42,22 @@
 
     <label for="lettre_motivation">Lettre de motivation :</label>
     <textarea id="lettre_motivation" name="lettre_motivation" rows="5"></textarea>
+
+    <label for="id_offre">Choisissez une offre :</label>
+<select id="id_offre" name="id_offre" required>
+  <option value="" disabled selected>-- Sélectionner une offre --</option>
+  <option value="1">Développeur Web Junior</option>
+  <option value="2">Assistant Cybersécurité</option>
+  <option value="3">Data Analyst</option>
+  <option value="4">Support Technique</option>
+  <option value="5">Développeur Mobile</option>
+  <option value="6">Administrateur Réseau</option>
+  <option value="7">Développeur Backend</option>
+  <option value="8">Testeur QA</option>
+  <option value="9">Community Manager</option>
+  <option value="10">UX/UI Designer</option>
+</select>
+
 
     <label for="accept_conditions">
       <input type="checkbox" id="accept_conditions" name="accept_conditions" required />

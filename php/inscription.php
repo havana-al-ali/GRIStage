@@ -1,5 +1,4 @@
 <?php
-// Connexion à la base de données MySQL (à adapter selon tes paramètres)
 $host = 'localhost';
 $dbname = 'gristage';
 $user = 'root';
@@ -28,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $mot_de_passe_conf = $_POST['mot_de_passe_conf'] ?? '';
     $lettre_motivation = trim($_POST['lettre_motivation'] ?? '');
     $accept_conditions = isset($_POST['accept_conditions']);
+    $id_offre = $_POST['id_offre'] ?? '';
 
     // Validation des champs obligatoires
     if (!$nom || !$prenom || !$email || !$mot_de_passe || !$mot_de_passe_conf) {
@@ -41,6 +41,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     if ($mot_de_passe !== $mot_de_passe_conf) {
         error("Les mots de passe ne correspondent pas.");
+    }
+    if (!$id_offre) {
+        error("Vous devez choisir une offre.");
     }
 
     // Vérifier l'upload du CV
@@ -97,9 +100,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = $pdo->prepare("INSERT INTO t_document (type, fichier_nom, id_utilisateur) VALUES (?, ?, ?)");
         $stmt->execute(['cv', $filename, $id_utilisateur]);
 
-        // Insertion lettre de motivation dans une table candidature (à adapter selon ta base)
-        $stmt = $pdo->prepare("INSERT INTO t_candidature (id_utilisateur, lettre_motivation) VALUES (?, ?)");
-        $stmt->execute([$id_utilisateur, $lettre_motivation]);
+        // Insertion lettre de motivation dans la table candidature
+        $stmt = $pdo->prepare("INSERT INTO t_candidature (id_utilisateur, id_offre, lettre_motivation) VALUES (?, ?, ?)");
+        $stmt->execute([$id_utilisateur, $id_offre, $lettre_motivation]);
 
         echo "<p style='color:green;'>Inscription réussie ! Vous pouvez maintenant vous connecter.</p>";
 
