@@ -587,3 +587,63 @@ footer {
       color:black;
       margin-top: 10px;
     }
+  .banner {
+  background-image: url(../img/Blue\ Illustration\ Technology\ LinkedIn\ Banner\ \(1\).png);
+  background-size: cover;
+  background-position: center;
+  height: 380px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.banner-overlay {
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.banner-title {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.banner-subtitle {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.btns {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.glow-on-hover-2 i {
+  margin-right: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 28px;
+  }
+
+  .banner-subtitle {
+    font-size: 16px;
+  }
+
+  .btns {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .glow-on-hover-2 {
+    width: 180px;
+  }
+}
+  
