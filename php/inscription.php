@@ -67,14 +67,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Hachage du mot de passe
     $mot_de_passe_hash = password_hash($mot_de_passe, PASSWORD_DEFAULT);
-
-    try {
-        // Vérifier si email existe déjà
+   //Vérifier si email existe déjà
+    try { 
         $stmt = $pdo->prepare("SELECT COUNT(*) FROM t_utilisateur WHERE email = ?");
         $stmt->execute([$email]);
         if ($stmt->fetchColumn() > 0) {
-            error("Cette adresse email est déjà utilisée.");
-        }
+           error("Cette adresse email est déjà utilisée.");
+       }
 
         // Insertion utilisateur
         $stmt = $pdo->prepare("INSERT INTO t_utilisateur (nom, prenom, email, mot_de_passe) VALUES (?, ?, ?, ?)");

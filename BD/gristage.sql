@@ -51,14 +51,21 @@ CREATE TABLE IF NOT EXISTS t_candidature (
 );
 
 -- Insertion des offres
-INSERT INTO t_offre (id_offre, titre, description) VALUES
-(1, 'Développeur Web Junior', 'Stage en développement web pour débutants.'),
-(2, 'Assistant Cybersécurité', 'Assister l\'équipe de cybersécurité sur les projets.'),
-(3, 'Data Analyst', 'Analyse de données et création de dashboards.'),
-(4, 'Support Technique', 'Répondre aux demandes des utilisateurs.'),
-(5, 'Développeur Mobile', 'Stage en développement d\'applications mobiles.'),
-(6, 'Administrateur Réseau', 'Gestion et maintenance des réseaux internes.'),
-(7, 'Développeur Backend', 'Développement de services backend en PHP.'),
-(8, 'Testeur QA', 'Effectuer des tests fonctionnels et de performance.'),
-(9, 'Community Manager', 'Gérer les réseaux sociaux et la communication.'),
-(10, 'UX/UI Designer', 'Créer des interfaces utilisateurs intuitives.');
+INSERT INTO t_offre (titre, description) VALUES
+('Développeur Web Junior', 'Stage en développement web pour débutants.'),
+('Assistant Cybersécurité', 'Assister l\'équipe de cybersécurité sur les projets.'),
+('Data Analyst', 'Analyse de données et création de dashboards.'),
+('Support Technique', 'Répondre aux demandes des utilisateurs.'),
+('Développeur Mobile', 'Stage en développement d\'applications mobiles.'),
+('Administrateur Réseau', 'Gestion et maintenance des réseaux internes.'),
+('Développeur Backend', 'Développement de services backend en PHP.'),
+('Testeur QA', 'Effectuer des tests fonctionnels et de performance.'),
+('Community Manager', 'Gérer les réseaux sociaux et la communication.'),
+( 'UX/UI Designer', 'Créer des interfaces utilisateurs intuitives.');
+
+-- Insertion des utilisateur
+INSERT INTO t_utilisateur (nom, prenom, email, mot_de_passe) VALUES
+('Al-Ali', 'Havana', 'alihavana506@gmail.com', 'Mahmoud2025'),
+('Al-Ali', 'Jan', 'Janali@gmail.com', 'Jan2015'),
+('Al-Ali', 'Emma', 'emmaali@gmail.com', 'Emma2017'),
+('Rahmoun', 'Mahmoud', 'mahmoud4rahmoun@gmail.com', 'Havana2024');
