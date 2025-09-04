@@ -17,7 +17,9 @@ CREATE TABLE IF NOT EXISTS t_utilisateur (
     nom            VARCHAR(50) NOT NULL,
     prenom         VARCHAR(50) NOT NULL,
     email          VARCHAR(100) NOT NULL UNIQUE,
-    mot_de_passe   VARCHAR(100) NOT NULL
+    mot_de_passe   VARCHAR(100) NOT NULL,
+    reset_token    VARCHAR(255) DEFAULT NULL,
+    reset_expiration DATETIME DEFAULT NULL
 );
 
 -- Table : t_document
@@ -61,7 +63,7 @@ INSERT INTO t_offre (titre, description) VALUES
 ('Développeur Backend', 'Développement de services backend en PHP.'),
 ('Testeur QA', 'Effectuer des tests fonctionnels et de performance.'),
 ('Community Manager', 'Gérer les réseaux sociaux et la communication.'),
-( 'UX/UI Designer', 'Créer des interfaces utilisateurs intuitives.');
+('UX/UI Designer', 'Créer des interfaces utilisateurs intuitives.');
 
 -- Insertion des utilisateur
 INSERT INTO t_utilisateur (nom, prenom, email, mot_de_passe) VALUES
