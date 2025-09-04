@@ -14,21 +14,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute([$email]);
     $utilisateur = $stmt->fetch();
 
+
+    
     // Vérification du mot de passe
     if ($utilisateur && password_verify($mot_de_passe, $utilisateur['mot_de_passe'])) {
         $_SESSION['utilisateur'] = $utilisateur;
-//il faut mettre un echo...............
 
         // Redirection vers tableau de bord
-        header("Location: ../view/dashboard.php");
-        exit();
-    } else {
+        //header : va à url
+        header("Location: ../php/dashboard.php");
+    }
         //  Mauvais identifiants, on redirige vers login avec erreur
         header("Location: ../view/login.html?error=1");
-        exit();
-    }
+    
+    
 } else {
     //  Si la page est accédée directement sans POST, on redirige vers le formulaire
     header("Location: ../view/login.html");
-    exit();
+    
 }
