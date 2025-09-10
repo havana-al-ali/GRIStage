@@ -67,7 +67,7 @@ INSERT INTO t_offre (titre, description) VALUES
 
 -- Insertion des utilisateur
 INSERT INTO t_utilisateur (nom, prenom, email, mot_de_passe) VALUES
-('Al-Ali', 'Havana', 'alihavana506@gmail.com', 'Mahmoud2025'),
-('Al-Ali', 'Jan', 'Janali@gmail.com', 'Jan2015'),
-('Al-Ali', 'Emma', 'emmaali@gmail.com', 'Emma2017'),
-('Rahmoun', 'Mahmoud', 'mahmoud4rahmoun@gmail.com', 'Havana2024');
+('Al-Ali', 'Havana', 'havanaali@gmail.com', '$2y$10$kHhs9VHSGZnPsXVDWp3ErutuMcAiEkz404ge6jbuZuPlNMgG69lOK'),
+('Al-Ali', 'Jan', 'Janali@gmail.com', '$2y$10$W.WQo3SUyqDDcMZFiZSCoeAxhdn9f1ah8uoi9XBSr5BB.kAjWeh7q'),
+('Al-Ali', 'Emma', 'emmaali@gmail.com', '$2y$10$F36ZyXWYYujWYt6/m.l7quA6hU7ss6Laz.klu.AQx1pglAsRnp4yu'),
+('Rahmoun', 'Mahmoud', 'mahmoud4rahmoun@gmail.com', '$2y$10$UKaFtoJ97e4s.dcLdc7m.eoNKpfAktcVwBG5WCzHm7HaJoyZXgpfO');
