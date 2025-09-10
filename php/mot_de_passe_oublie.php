@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
     // Si la page est accédée sans POST
-    header("Location: ../view/login.html");
+    header("Location: ../view/login.php");
     exit;
 }
 ?>
