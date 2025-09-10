@@ -2,68 +2,70 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style/style.css">
-  <title>Gri stages</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style/style.css" />
+  <title>Gri Stages</title>
 </head>
 
 <body>
   <nav>
-    <img src="../img/Logo-GRI-300-fond-transparent.png" alt="gri-logo" width="140" height="79">
+    <img src="../img/logo-gri.png" alt="gri-logo" width="140" height="79" />
     <ul>
       <li><a class="active" href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="offres.html">Offres</a></li>
       <li><a href="information.html">Informations</a></li>
-      <li><a href="login.html">Login</a></li>
+      <li><a href="login.php">Login</a></li>
       <li><a href="inscrire.html">Inscription</a></li>
     </ul>
   </nav>
-  <div class="banner">
-    <div class="btns">
-      <a href="../view/offres.html">
-        <button class="glow-on-hover-2">Offres</button>
-       
-      <a href="../view/login.html">
-        <button class="glow-on-hover-2">Login</button>
 
-      <a href="../view/inscrire.html">
-        <button class="glow-on-hover-2">S'inscrire</button>
-      </a>
+  <div class="banner">
+    <div class="banner-overlay">
+      <h1 class="banner-title">Bienvenue chez GRIStage</h1>
+      <p class="banner-subtitle">La plateforme de stages dédiée aux futurs développeurs</p>
+      <div class="btns">
+        <a href="../view/offres.html">
+          <button class="glow-on-hover-2">Offres</button>
+        </a>
+        <a href="../view/login.php">
+          <button class="glow-on-hover-2">Login</button>
+        </a>
+        <a href="../view/inscrire.html">
+          <button class="glow-on-hover-2">S'inscrire</button>
+        </a>
+      </div>
     </div>
   </div>
-  <div id="offres-container"></div>
 
-  
   <div class="container">
     <div class="cologne-gauche">
-  <h1 class="titre-1">Rejoins l’avenir de l’informatique <br> avec nous !</h1>
-      <p class="bienvenue">Bienvenue sur Gri Stage, votre plateforme dédiée à l’apprentissage et au perfectionnement en
-        développement informatique. Ce site a été conçu pour les stagiaires curieux, motivés et passionnés par le monde
-        du numérique.Dès votre arrivée, vous trouverez ici des ressources pratiques sur les langages de programmation,
-        les outils de développement modernes, les bonnes pratiques en conception web, ainsi que des guides et tutoriels
-        adaptés à votre niveau.Gri Stage vous accompagne tout au long de votre parcours avec une approche structurée et
-        enrichissante, pour faire de votre stage une véritable expérience d’évolution technique et professionnelle.</p><br>
- 
+      <h1 class="titre-1">Rejoins l’avenir de l’informatique <br />avec nous !</h1>
+      <p class="bienvenue">
+      Bienvenue sur Gri Stage, la plateforme dédiée aux stagiaires en développement informatique. Accédez à des ressources pratiques, tutoriels, et bonnes pratiques couvrant les langages de programmation, outils modernes et conception web. Gri Stage vous guide à chaque étape pour faire de votre stage une expérience technique et professionnelle enrichissante.
+      </p>
+    </div>
+
+    <div class="cologne-milieu">
+      <div class="temoignage">
+        <img src="../img/stage.webp" alt="temoignage" width="250" height="250" />
+        <h4>Grâce à GRIStage, j'ai trouvé mon stage en deux semaines.</h4>
+        <p><samp>Prénom:</samp> Bismellah</p>
+        <p><samp>Nom:</samp> HASHIMI</p>
+        <p><samp>Âge:</samp> 19 ans</p>
+        <p><samp>Stage:</samp> Développeur web</p>
+        <p><samp>Durée:</samp> 2 semaines</p>
+      </div>
+    </div>
+
+    <div class="cologne-droite">
+      <img src="../img/search.png" alt="search" width="30" height="30" />
+      <p>+200 stages IT publiés chaque mois.</p>
+      <p>95% des étudiants trouvent un stage via GRIStage.</p>
+    </div>
   </div>
-<div class="cologne-milieu">
-<div class="temoignage">
-  <img src="../img/ai-generated-young-man-studies-online-and-exploring-knowledge-with-a-laptop-in-flat-art-style-free-png.webp" alt="" width="250" height="250">
-  <h4>Grâce à GRIStage, j'ai trouvé mon stage en deux semaine.</h4>
-  <p><samp>Prénom:</samp> Bismellah</p>
-  <p><samp>Nom:</samp> HASHIMI</p>
-  <p><samp>Age:</samp> 19 ans</p>
-  <p><samp>Stage:</samp> Développeur web</p>
-  <p><samp>Durée:</samp>2 semaine</p>
-</div>
-</div>
-<div class="cologne-droite">
-  <img src="../img/search.png" alt="serche" width="30" height="30">
-  <p>+200 stages IT publiés chaque mois.</p>
-  <p>95% des étudiants trouvant un stage via GRIStage.</p>
-</div>
-  </div>  
+
   <footer>
     <div class="container-footer">
       <div class="col autures">
@@ -79,16 +81,14 @@
       </div>
 
       <div class="col-gri">
-        <p class="par-phon">Tél: ++41 21 652 30 70</p>
+        <p class="par-phon">Tél: +41 21 652 30 70</p>
         <a href="mailto:gri@gri.ch" class="mail">Email: gri@gri.ch</a>
-        <p class="addresse">Adresse: En Chamard 41A 1442 Montagny</p>
+        <p class="addresse">Adresse: En Chamard 41A, 1442 Montagny</p>
       </div>
-
     </div>
   </footer>
 
+  <script src="../script/main.js"></script>
 </body>
-<script src="../script/main.js"></script>
-
 
 </html>

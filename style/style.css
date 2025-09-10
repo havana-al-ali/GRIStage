@@ -1,8 +1,12 @@
 body {
+  body {
   margin: 0;
   padding: 0;
-  /*changement pour page offres*/
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
 }
 
 ul {
@@ -99,12 +103,6 @@ li a:hover {
   background: #25afb4;
 }
 
-.banner {
-  background-image: url(../img/Blue\ Illustration\ Technology\ LinkedIn\ Banner\ \(1\).png);
-  width: 1905px;
-  height: 335px;
-}
-
 .titre-2 {
 
   font-style: normal;
@@ -131,30 +129,26 @@ h4{
   font-family: Arial, Helvetica, sans-serif;
 
 }
-  .cologne-gauche{
-  width: 40%;
-  float: left;
-  margin-right: 0px;
-  }
- .cologne-milieu{
-  text-align: center;
-  margin: auto;
-  margin-left: 0px;
-  margin-top: 40px;
-  }
-.cologne-droite{
-  margin-top: 50px;
-  float: right;
-  font-size: 20px;
-  padding-right: 80px;
+/*page accueil div container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap; /* Pour que ça reste responsive */
 }
-.temoignage{
-  border: 2px solid #aeb4c9;
-  border-radius: 5px;
-  background-color: #faf7f7;
+.cologne-gauche,
+.cologne-milieu,
+.cologne-droite {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f9f9f9;
+  border-radius: 20px;
   padding: 20px;
-  margin: 20px;
+  box-sizing: border-box;
 }
+
 
  .bienvenue{
   margin-left: 50px;
@@ -245,11 +239,6 @@ footer {
 
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-
-}
 
 .colonne {
   margin-top: 2%;
@@ -362,7 +351,7 @@ footer {
 .container-2 .bloc-2,
 .container-2 .bloc-3 {
   background-color: #ffffff;
-  border-left: 6px solid #007B8A;
+  border-left: 6px solid #3b97ede5;
   border-radius: 8px;
   padding: 20px 25px;
   margin-bottom: 10px;
@@ -373,7 +362,7 @@ footer {
 .container-2 h1 {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #007B8A;
+  color: #3b97ede5;
 }
 
 .container-2 h4 {
@@ -384,7 +373,7 @@ footer {
 
 .container-2 h3 {
   font-size: 20px;
-  color: #005f6b;
+  color: #3b97ede5;
   margin-top: 15px;
 }
 
@@ -398,7 +387,7 @@ footer {
 
 /* Liens */
 .container-2 a {
-  color: #007B8A;
+  color: #3b97ede5;
   text-decoration: none;
 }
 
@@ -439,7 +428,7 @@ footer {
 }
 .docs {
   background-color: #ffffff;
-  border-left: 6px solid #007B8A;
+  border-left: 6px solid #3b97ede5;
   border-radius: 8px;
   padding: 20px 25px;
   margin-bottom: 10px;
@@ -454,6 +443,7 @@ footer {
   margin: 30px auto;
   padding: 20px;
   max-width: 800px;
+  background-color: #f9f9f9;
 }
 .but-3{
   text-align: center;
@@ -472,7 +462,7 @@ footer {
       display: flex; gap: 20px; justify-content: space-between; flex-wrap: wrap;
        }
     .service-card {
-      background: white; 
+      background: #f9f9f9; 
       border-radius: 8px; 
       box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
       padding: 20px;
@@ -588,7 +578,6 @@ footer {
       margin-top: 10px;
     }
   .banner {
-  background-image: url(../img/Blue\ Illustration\ Technology\ LinkedIn\ Banner\ \(1\).png);
   background-size: cover;
   background-position: center;
   height: 380px;
@@ -596,15 +585,11 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: black;
   text-align: center;
 }
 
-.banner-overlay {
-  background-color: rgba(0, 0, 0, 0.45);
-  padding: 40px;
-  border-radius: 10px;
-}
+
 
 .banner-title {
   font-size: 42px;
