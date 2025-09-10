@@ -22,7 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Récupérer et sécuriser les données
     $nom = trim($_POST['nom'] ?? '');
     $prenom = trim($_POST['prenom'] ?? '');
-    $email = trim($_POST['email'] ?? '');
+    $email = trim($_POST['no_autofill_email'] ?? '');
+
     $mot_de_passe = $_POST['mot_de_passe'] ?? '';
     $mot_de_passe_conf = $_POST['mot_de_passe_conf'] ?? '';
     $lettre_motivation = trim($_POST['lettre_motivation'] ?? '');
